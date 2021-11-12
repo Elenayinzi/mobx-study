@@ -22,14 +22,23 @@
 
     6.安装mobx: yarn add mobx mobx-react
 ## 装饰器语法
+    @语法，在es6语法中叫做装饰器，装饰器是一个对类进行处理的函数
 ## observable函数
-    1.装饰器函数：将普通数据转换成一个可被观测的数据
-
-    2.
+    装饰器函数：将普通数据转换成一个可被观测的数据
 ## computed计算属性
+    是一个函数方法，但是当作属性来用；把获取结果的逻辑封装成一个计算属性，会缓存计算结果，多次调用只会计算一次，只有依赖数据改变才会重新计算
 ## action基本概念
+    装饰器，用来修改observable数据
 ## action-bound绑定
-## action-runInAction
+    bound为action绑定this,保证this指向mobx容器对象
+## runInAction
+    不使用action的时候，直接调用runInAction修改数据
 ## action-异步action
+    如何在action中异步结束后对数据进行修改；1.定义一个新的action函数，在异步中调用；2.直接调用action函数并立即执行；3.使用runInAction函数
 ## 监视数据的方式
+    1.autorun,默认会执行一次，当内部被观测的数据发生改变时候会重新触发执行
+
+    2.when:当满足某个条件时，执行一次，并且只执行一次
+
+    3.reaction:执行一些业务逻辑操作，返回数据给下一个函数使用
 ## 购物车demo
